@@ -1,4 +1,4 @@
-Project OVerview
+Project Overview
 
 COVID-19's effects in the U.S. can be seen in almost all industries and areas of life, from changes in the way we work and travel to how we shop. 
 One of the most surprising, yet understandable changes that have occurred is the surge in dog adoptions. 
@@ -25,7 +25,7 @@ Research Questions:
 	4. What is the average intelligence across all breeds based on dog weight?
 		• Small dogs < 35 lbs
 		• Medium breeds - between 35 and 65 lbs
-Large dogs > 65 lbs
+		• Large dogs > 65 lbs
 
 
 Project Report
