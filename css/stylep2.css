@@ -16,6 +16,14 @@ section h1 { text-transform: uppercase; color: white; margin-top: 0px; margin-bo
 
 .center-row { display: table; }
 .center-row .center { display: table-cell; vertical-align: middle; }
+
+/*------------------------------------------------------
+	IMAGE SLIDER
+--------------------------------------------------------*/
+.carousel-inner img {max-height: 900px; width: auto; height: auto; object-fit:contain;}
+.carousel-caption-left {text-align: left; left: 15% ; right: auto; padding: 5px; top: 5%; bottom: auto;}
+.carousel-caption-right {text-align: right; right: 5% ; left: auto; padding: 5px; top: 5%; bottom: auto;}}
+
 /*------------------------------------------------------
 	NAVIGATION 
 --------------------------------------------------------*/
@@ -57,11 +65,42 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 #team_content { height: 280px; }
 
 /*------------------------------------------------------
-	IMAGE SLIDER
+	Data Cleaning - ETL Styles 
 --------------------------------------------------------*/
-.carousel-inner img {max-height: 600px; width: auto; height: auto; object-fit:contain;}
-.carousel-caption-left {text-align: left; left: 5% ; right: auto; padding: 5px; top: 5%; bottom: auto;}
-.carousel-caption-right {text-align: right; right: 5% ; left: auto; padding: 5px; top: 5%; bottom: auto;}}
+.services_buttons .icon-button:last-of-type { margin-bottom: 0; }
+.services_buttons .icon-button {
+	font-size: 400%;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+	display: inline-block;
+	margin-bottom: 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 100%;
+	height: 100%;
+	max-width: 90px;
+	max-height: 90px;
+	line-height: 90px;
+}
+
+.services_buttons  .icon-button:hover, .services_buttons  .icon-button.active {	background-color: #e98714; }
+
+#services h1 { background-color: #e98714; }
+#services .col-md-2 { padding-right: 0; }
+#services .fa { line-height: 90px; }
+#services_content { height: 280px; }
+#services_content .tab-pane {  padding: 15px; }
+#services_content a { color: #FFFFFF; }
+
+/*http://cssarrowplease.com/*/
+.arrow-box { position: relative; color: white; background-color: #e98714; border-radius: 4px; margin-left: 30px; height: 100%;}
+.arrow-left { display: block; width: 30px; height: 58px; background: url(../images/left_arrow.png) no-repeat 0 0; position: absolute; left: 1px; margin-top: 20px; }
+
 
 /*------------------------------------------------------
 	MEDIA QUERIES 
@@ -72,8 +111,9 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 	.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .menu ul li a.current {
 		height: 85px;
 	}
-	#about .col-md-7 { padding-left: 50px; }
-	#about .col-md-8 { padding-left: 20px; }
+
+	#project_overview .col-md-7 { padding-left: 50px; }
+	#project_overview .col-md-8 { padding-left: 20px; }
 	#team .col-md-7 { padding-right: 50px; }
 	#skills .col-md-7 { padding-right: 90px; }
 	#portfolio .col-md-7 { padding-left: 46px; }
@@ -84,8 +124,8 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 	h1 { font-size: 3.5em; }
 	.services_buttons { text-align: right; }
 	
-	#about .col-md-7 { padding-left: 30px; }
-	#about .col-md-8 { padding-left: 20px; }
+	#project_overview .col-md-7 { padding-left: 30px; }
+	#project_overview .col-md-8 { padding-left: 20px; }
 	#team .col-md-7 { padding-right: 30px; }
 	#skills .col-md-7 { padding-right: 30px; }
 	#portfolio .col-md-7 { padding-left: 30px; }
@@ -98,8 +138,8 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 	.btn-primary { font-size: 1.6em; }
 	.services_buttons { text-align: left; }
 
-	#about .col-md-8 { padding-left: 0; padding-bottom: 20px; }
-	#about img { padding: 0; margin-top: 20px; margin-bottom: 20px;	}
+	#project_overview .col-md-8 { padding-left: 0; padding-bottom: 20px; }
+	#project_overview img { padding: 0; margin-top: 20px; margin-bottom: 20px;	}
 	#services .col-md-2, #services_content { padding-left: 0; padding-top: 20px; height: 300px; }
 	#portfolio p { padding: 7.3% 4%; }
 	#portfolio .col-md-7, #blog .col-md-7, #contact .col-md-7  { padding-left: 0; padding-top: 20px; }	
@@ -115,8 +155,8 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 	.services_buttons { text-align: left; }
 	.services_buttons .icon-button { font-size: 210%; }
 	.blog_post img { max-width: 100%; }
-	#about .col-md-8 { padding-left: 0; padding-bottom: 20px; }	
-	#about img { padding: 0; margin-top: 20px; margin-bottom: 20px; }
+	#project_overview .col-md-8 { padding-left: 0; padding-bottom: 20px; }	
+	#project_overview img { padding: 0; margin-top: 20px; margin-bottom: 20px; }
 	#team_content { width: 100%; }
 	#services .col-md-2, #services_content { padding-left: 0; padding-top: 20px; height: 300px; }
 	#services_tabs { padding-left: 10px; }
@@ -136,8 +176,8 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 	.services_buttons .icon-button { font-size: 190%; }
 	.blog_post { width: 50%;}
     .blog_post img { max-width: 100%; }    
-	#about .col-md-8 { padding-left: 0; padding-bottom: 20px; }
-	#about img { padding: 0; margin-top: 20px; margin-bottom: 20px; }
+	#project_overview .col-md-8 { padding-left: 0; padding-bottom: 20px; }
+	#project_overview img { padding: 0; margin-top: 20px; margin-bottom: 20px; }
 	#team_content { width: 100%; }
 	#services .col-md-2, #services_content { padding-left: 0; padding-top: 20px; height: 300px; }	
 	#services_tabs { padding-left: 0; }

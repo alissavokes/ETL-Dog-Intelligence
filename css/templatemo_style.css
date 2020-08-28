@@ -11,9 +11,9 @@ http://www.templatemo.com/tm-403-karma
 /*-----------------------------------------------------------------------------------*/
 html { font-size: 1em; }
 
-body { font-family: 'Comfortaa', Arial, sans-serif; overflow-x: hidden; } /*carasmo's comment to hide horizontal scroll bar https://github.com/twbs/bootstrap/issues/10711*/
+body { background-image: url("../images/multipaw.jpg"); background-repeat: repeat; font-family: 'Montserrat', Arial, sans-serif; overflow-x: hidden; } /*carasmo's comment to hide horizontal scroll bar https://github.com/twbs/bootstrap/issues/10711*/
 
-h1, h2, p { font-family: 'Comfortaa', Arial, sans-serif; }
+h1, h2, p { font-family: 'Montserrat', Arial, sans-serif; }
 
 h1 { font-weight: 700; }
 
@@ -42,7 +42,7 @@ nav { font-size: 1.2em; font-weight: lighter; }
 nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 
 .navbar {
-	background: #283147;
+	background: #696969;
 	min-height: 85px;	
 	border-radius: 0px; 
 	border: none; 
@@ -98,7 +98,7 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 /*------------------------------------------------------
 	About Us Styles 
 --------------------------------------------------------*/
-#about h1 { background-color: #498fc0; }
+#about h1 { background-color: #917876; }
 #about img { padding: 0; }
 #about_content { height: 280px; }
 
@@ -107,7 +107,7 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 --------------------------------------------------------*/
 #team .col-md-4 { padding: 5px; }
 #team img { margin: 0 auto; margin-bottom: 15px; }
-#team h1 { background-color: #498fc0; }
+#team h1 { background-color: #917876; }
 #team p { text-align: center; }
 #team_content { height: 280px; }
 
@@ -137,7 +137,7 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 
 .services_buttons  .icon-button:hover, .services_buttons  .icon-button.active {	background-color: #e98714; }
 
-#services h1 { background-color: #e98714; }
+#services h1 { background-color: #917876; }
 #services .col-md-2 { padding-right: 0; }
 #services .fa { line-height: 90px; }
 #services_content { height: 280px; }
@@ -145,7 +145,7 @@ nav .fa { display: block; text-align: center; margin-bottom: 13px; }
 #services_content a { color: #FFFFFF; }
 
 /*http://cssarrowplease.com/*/
-.arrow-box { position: relative; color: white; background-color: #e98714; border-radius: 4px; margin-left: 30px; height: 100%;}
+.arrow-box { position: relative; color: white; background-color: #917876; border-radius: 4px; margin-left: 30px; height: 100%;}
 .arrow-left { display: block; width: 30px; height: 58px; background: url(../images/left_arrow.png) no-repeat 0 0; position: absolute; left: 1px; margin-top: 20px; }
 
 /*------------------------------------------------------
