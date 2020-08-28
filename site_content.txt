@@ -1,0 +1,332 @@
+Project Overview
+
+COVID-19's effects in the U.S. can be seen in almost all industries and areas of life, from changes in the way we work and travel to how we shop. 
+One of the most surprising, yet understandable changes that have occurred is the surge in dog adoptions. 
+
+The Washington Post reported that increased consumer demand which has even led to waiting lists for certain breeds of dogs. 
+LINK: https://www.washingtonpost.com/nation/2020/08/12/adoptions-dogs-coronavirus/ 
+
+With so much interest in adopting these four-legged-pals, our team got together to compare dog breed height/weight and dog intelligence with the hopes of helping others with selecting their future pals. 
+
+Dog intelligence is determined by the aptitude demonstrated for obeying the first command (we will refer to this as the obedience ratio), and the repetition needed for a dog to understand a new command.
+
+Why is dog intelligence important? This dictates the approximate speed at which a dog will learn a new command and their track-record in obeying commands given, which can greatly reduce training time. Training is integral so that your new furry friend becomes acclimated to their new home, understands their place in the household, as well as their boundaries and expectations.  
+
+We do, however, want to provide two disclaimers:
+Regardless of their obedience level, all dogs do have the ability to learn and obey commands, it just may take more investment from their owner in the form of time and repetition.
+Intelligence is not the only factor that should be considered in the adoption process, please also consider breed-specific dog behaviors and health issues.
+
+We hope that our data insights will help individuals and families seeking a furry best friend to approximate the time investment needed to train their new family member. Dog training will encourage desirable behaviors that will contribute to a happy life for the entire family. 
+
+Research Questions:
+	1. What are the top 5 smartest large dog breeds?
+	2. What are the top 5 smartest small dog breeds?
+	3. What are the top ten dogs breeds by intelligence?
+	4. What is the average intelligence across all breeds based on dog weight?
+		• Small dogs < 35 lbs
+		• Medium breeds - between 35 and 65 lbs
+		• Large dogs > 65 lbs
+
+
+Project Report
+Extraction
+Both of our data sets were obtained from data.world, and have been included below.
+Dog Intelligence: https://data.world/len/intelligence-of-dogs
+Breed Size: https://data.world/len/dog-canine-breed-size-akc
+
+Our original data sources were formatted as CSV files.
+
+Transformation
+
+Once the data was reviewed, we identified a few issues that we needed to address in the data cleaning step, such as breed name inconsistencies, and missing/invalid values.  
+
+Using Pandas, the following steps were taken to address the identified issues.
+	- The obedience rate for low degree of working/obedience intelligence category dogs was updated to reflect a numerical value of 0% to replace the imported NaN values.
+	- The obedience rate was changed into a decimal value column to facilitate SQL importation. 
+	- Dog names where replaced in both CSV files where they were inconsistent (22 entries)
+	- Dogs with no size information were dropped from the dataset.
+	- The value counts function was used to identify height data that was not valid (such as "not found" and "na" values), which were then converted to NaN and dropped.
+	- The column titles were changed to lower case for consistency.
+
+Once the cleaning was finalized, a postgresql connection was initiated and the cleaned tables were loaded into the database. The tables were then merged using a SQL command and exported as a CSV file. This table may be found in the "Final Table" section of our website.
+
+
+Load
+Our group determined to merge the two tables into one in order to simplify our approach to pulling and evaluating information.
+
+
+
+Findings
+	1. What are the top 5 smartest large dog breeds?
+   
+	<table border="1" class="dataframe table table-bordered table-striped table-hover">
+	  <thead>
+	    <tr style="text-align: right;">
+	      <th>breed</th>
+	      <th>average_weight_lbs</th>
+	      <th>classification</th>
+	      <th>obey</th>
+	      <th>reps_lower</th>
+	      <th>reps_upper</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>German Shepherd</td>
+	      <td>82.5</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Labrador Retriever</td>
+	      <td>67.5</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Doberman Pinscher</td>
+	      <td>80.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Rottweiler</td>
+	      <td>100.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Belgian Sheepdog</td>
+	      <td>67.5</td>
+	      <td>Excellent Working Dogs</td>
+	      <td>0.85</td>
+	      <td>5</td>
+	      <td>15</td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+
+	2. What are the top 5 smartest small dog breeds?
+    
+	<table border="1" class="dataframe table table-bordered table-striped table-hover">
+	  <thead>
+	    <tr style="text-align: right;">
+	      <th>breed</th>
+	      <th>average_weight_lbs</th>
+	      <th>classification</th>
+	      <th>obey</th>
+	      <th>reps_lower</th>
+	      <th>reps_upper</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>German Shepherd</td>
+	      <td>82.5</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Labrador Retriever</td>
+	      <td>67.5</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Doberman Pinscher</td>
+	      <td>80.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Rottweiler</td>
+	      <td>100.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Belgian Sheepdog</td>
+	      <td>67.5</td>
+	      <td>Excellent Working Dogs</td>
+	      <td>0.85</td>
+	      <td>5</td>
+	      <td>15</td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+	3. What are the top ten dogs breeds by intelligence?
+    
+	<table border="1" class="dataframe table table-bordered table-striped table-hover">
+	  <thead>
+	    <tr style="text-align: right;">
+	      <th>breed</th>
+	      <th>average_weight_lbs</th>
+	      <th>classification</th>
+	      <th>obey</th>
+	      <th>reps_lower</th>
+	      <th>reps_upper</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>Border Collie</td>
+	      <td>40.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Shetland Sheepdog</td>
+	      <td>17.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Labrador Retriever</td>
+	      <td>67.5</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Australian Cattle Dog</td>
+	      <td>40.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Doberman Pinscher</td>
+	      <td>80.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>German Shepherd</td>
+	      <td>82.5</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Golden Retriever</td>
+	      <td>65.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Rottweiler</td>
+	      <td>100.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Poodle Standard</td>
+	      <td>45.0</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	    <tr>
+	      <td>Papillon</td>
+	      <td>7.5</td>
+	      <td>Brightest Dogs</td>
+	      <td>0.95</td>
+	      <td>1</td>
+	      <td>4</td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+
+	4. What is the average intelligence across all breeds based on dog weight?
+	
+	We surprisingly found that dogs between 35 and 65 lbs had a higher intelligence on average among the three groups.
+	
+	<table border="1" class="dataframe table table-bordered table-striped table-hover">
+	  <thead>
+	    <tr style="text-align: right;">
+	      <th>dog size</th>
+	      <th>dog count</th>
+	      <th>average obediance</th>
+	      <th>average low reps</th>
+	      <th>average upper reps</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>small dogs &lt; 35 lbs</td>
+	      <td>49</td>
+	      <td>0.51</td>
+	      <td>28.00</td>
+	      <td>47.61</td>
+	    </tr>
+	    <tr>
+	      <td>medium dogs - between 35 and 65 lbs</td>
+	      <td>35</td>
+	      <td>0.60</td>
+	      <td>24.00</td>
+	      <td>36.49</td>
+	    </tr>
+	    <tr>
+	      <td>large dogs &gt; 65 lbs</td>
+	      <td>28</td>
+	      <td>0.56</td>
+	      <td>25.86</td>
+	      <td>40.39</td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+		
+		
+Dog size factors (such as height and weight) and intelligence (in the form of the obedience ratio) were compared. We identified that no strong relationship between average breed weight/height and obedience exists as dogs at all sizes could be found in each intelligence category. These results suggest that intelligence is derived from breed-specific factors, as the 10 most intelligent breeds reflect dogs that are less than 10 to 100 lbs.
+
+<img src="images/Relationship between Dog Average Weight and Obedience - All Breeds.png" 
+alt="Weight vs Obedience Scatter Plot - All Breeds">
+
+<img 
+src="images/Relationship between Dog Average Height and Obedience - All Breeds.png" 
+alt="Height vs Obedience Scatter Plot - All Breeds">
+
+<img 
+src="images/Relationship between Dog Weight, Height, and Obedience - All Breeds.png" 
+alt="Weight and Height vs Obedience Scatter Plot - All Breed">
+
+<img 
+src="images/Relationship between Dog Weight, Height, and Obedience - Top 10 Breedspng" 
+alt="Weight vs Obedience Scatter Plot - Top 10 Breeds.png">
+
+
+
