@@ -47,6 +47,8 @@ Using Pandas, the following steps were taken to address the identified issues.
 	- Dogs with no size information were dropped from the dataset.
 	- The value counts function was used to identify height data that was not valid (such as "not found" and "na" values), which were then converted to NaN and dropped.
 	- The column titles were changed to lower case for consistency.
+    - Height and weight column data types were transformed using the to_numeric Pandas function.
+    - The mean weight and height for each breed were calculated based on the low and high ranges provided by the original data set.
 
 Once the cleaning was finalized, a postgresql connection was initiated and the cleaned tables were loaded into the database. The tables were then merged using a SQL command and exported as a CSV file. This table may be found in the "Final Table" section of our website.
 
@@ -117,60 +119,66 @@ Findings
 
 	2. What are the top 5 smartest small dog breeds?
     
-	<table border="1" class="dataframe table table-bordered table-striped table-hover">
-	  <thead>
-	    <tr style="text-align: right;">
-	      <th>breed</th>
-	      <th>average_weight_lbs</th>
-	      <th>classification</th>
-	      <th>obey</th>
-	      <th>reps_lower</th>
-	      <th>reps_upper</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>German Shepherd</td>
-	      <td>82.5</td>
-	      <td>Brightest Dogs</td>
-	      <td>0.95</td>
-	      <td>1</td>
-	      <td>4</td>
-	    </tr>
-	    <tr>
-	      <td>Labrador Retriever</td>
-	      <td>67.5</td>
-	      <td>Brightest Dogs</td>
-	      <td>0.95</td>
-	      <td>1</td>
-	      <td>4</td>
-	    </tr>
-	    <tr>
-	      <td>Doberman Pinscher</td>
-	      <td>80.0</td>
-	      <td>Brightest Dogs</td>
-	      <td>0.95</td>
-	      <td>1</td>
-	      <td>4</td>
-	    </tr>
-	    <tr>
-	      <td>Rottweiler</td>
-	      <td>100.0</td>
-	      <td>Brightest Dogs</td>
-	      <td>0.95</td>
-	      <td>1</td>
-	      <td>4</td>
-	    </tr>
-	    <tr>
-	      <td>Belgian Sheepdog</td>
-	      <td>67.5</td>
-	      <td>Excellent Working Dogs</td>
-	      <td>0.85</td>
-	      <td>5</td>
-	      <td>15</td>
-	    </tr>
-	  </tbody>
-	</table>
+    <table border="1" class="dataframe table table-bordered table-striped table-hover">
+      <thead>
+        <tr style="text-align: right;">
+          <th>breed</th>
+          <th>average_weight_lbs</th>
+          <th>average_height_inches</th>
+          <th>classification</th>
+          <th>obey</th>
+          <th>reps_lower</th>
+          <th>reps_upper</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Papillon</td>
+          <td>7.5</td>
+          <td>9.5</td>
+          <td>Brightest Dogs</td>
+          <td>0.95</td>
+          <td>1</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Shetland Sheepdog</td>
+          <td>17.0</td>
+          <td>14.5</td>
+          <td>Brightest Dogs</td>
+          <td>0.95</td>
+          <td>1</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>American Cocker Spaniel</td>
+          <td>25.0</td>
+          <td>15.5</td>
+          <td>Excellent Working Dogs</td>
+          <td>0.85</td>
+          <td>5</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Standard Schnauzer</td>
+          <td>33.0</td>
+          <td>18.0</td>
+          <td>Excellent Working Dogs</td>
+          <td>0.85</td>
+          <td>5</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>English Cocker Spaniel</td>
+          <td>30.0</td>
+          <td>16.0</td>
+          <td>Excellent Working Dogs</td>
+          <td>0.85</td>
+          <td>5</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
 	
 	3. What are the top ten dogs breeds by intelligence?
     
