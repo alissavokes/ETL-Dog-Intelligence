@@ -161,6 +161,19 @@ body {
     text-align: left;
 }
 
+.table_4 tr td:nth-child(1) {
+    text-align: left;
+}
+.table_4 tr td:nth-child(4) {
+    text-align: left;
+}
+.table_4 tr th:nth-child(1) {
+    text-align: left;
+}
+.table_4 tr th:nth-child(4) {
+    text-align: left;
+}
+
 #data_analysis img {
     max-width: 450px;
     width: auto;
