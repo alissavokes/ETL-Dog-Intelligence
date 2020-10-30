@@ -43,14 +43,14 @@ Once the data was reviewed, we identified a few issues that we needed to address
 Using Pandas, the following steps were taken to address the identified issues.
 	- The obedience rate for low degree of working/obedience intelligence category dogs was updated to reflect a numerical value of 0% to replace the imported NaN values.
 	- The obedience rate was changed into a decimal value column to facilitate SQL importation. 
-	- Dog names where replaced in both CSV files where they were inconsistent (22 entries)
+	- Dog names were replaced in both CSV files where they were inconsistent (22 entries)
 	- Dogs with no size information were dropped from the dataset.
 	- The value counts function was used to identify height data that was not valid (such as "not found" and "na" values), which were then converted to NaN and dropped.
 	- The column titles were changed to lower case for consistency.
     - Height and weight column data types were transformed using the to_numeric Pandas function.
     - The mean weight and height for each breed were calculated based on the low and high ranges provided by the original data set.
 
-Once the cleaning was finalized, a postgresql connection was initiated and the cleaned tables were loaded into the database. The tables were then merged using a SQL command and exported as a CSV file. This table may be found in the "Final Table" section of our website.
+Once the cleaning was finalized, a PostgreSQL connection was initiated and the cleaned tables were loaded into the database. The tables were then merged using a SQL command and exported as a CSV file. This table may be found in the "Final Table" section of our website.
 
 
 Load
