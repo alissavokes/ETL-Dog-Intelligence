@@ -3,7 +3,7 @@ Project Overview
 COVID-19's effects in the U.S. can be seen in almost all industries and areas of life, from changes in the way we work and travel to how we shop. 
 One of the most surprising, yet understandable changes that have occurred is the surge in dog adoptions. 
 
-The Washington Post reported that increased consumer demand which has even led to waiting lists for certain breeds of dogs. 
+The Washington Post reported that increased consumer demand has even led to waiting lists for certain breeds of dogs. 
 LINK: https://www.washingtonpost.com/nation/2020/08/12/adoptions-dogs-coronavirus/ 
 
 With so much interest in adopting these four-legged-pals, our team got together to compare dog breed height/weight and dog intelligence with the hopes of helping others with selecting their future pals. 
@@ -21,7 +21,7 @@ We hope that our data insights will help individuals and families seeking a furr
 Research Questions:
 	1. What are the top 5 smartest large dog breeds?
 	2. What are the top 5 smartest small dog breeds?
-	3. What are the top ten dogs breeds by intelligence?
+	3. What are the top ten dog breeds by intelligence?
 	4. What is the average intelligence across all breeds based on dog weight?
 		• Small dogs < 35 lbs
 		• Medium breeds - between 35 and 65 lbs
