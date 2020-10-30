@@ -32,6 +32,7 @@ The [data_etl.ipynb](https://github.com/alissavokes/ETL-Dog-Intelligence/blob/ma
 Our original data sources were formatted as CSV files. Both data sets were obtained from [data.world](https://data.world/len/dog-size-intelligence-linked), and have been included below.
 
 [Dog Intelligence-Obedience](https://data.world/len/intelligence-of-dogs)
+
 [AKC Breed Measurements](https://data.world/len/dog-canine-breed-size-akc)
 
 ### Transform
@@ -62,7 +63,7 @@ Dog size factors, such as height and weight, and intelligence (in the form of th
 ![ETL Transformation](images/Relationship%20between%20Dog%20Weight,%20Height,%20and%20Obedience%20-%20All%20Breeds.png)
 ![ETL Transformation](images/Relationship%20between%20Dog%20Weight,%20Height,%20and%20Obedience%20-%20Top%2010%20Breeds.png)
 
-# Questions Answered
+## Questions Answered
 ### Top 5 smartest large dog breeds.
 
 ![Top five smartest large breeds](images/Top%205%20most%20intelligent%20large%20dog%20breeds.PNG)
