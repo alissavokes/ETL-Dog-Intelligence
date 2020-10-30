@@ -63,17 +63,20 @@ Dog size factors, such as height and weight, and intelligence (in the form of th
 ![ETL Transformation](images/Relationship%20between%20Dog%20Weight,%20Height,%20and%20Obedience%20-%20Top%2010%20Breeds.png)
 
 # Questions Answered
-* Top 5 smartest large dog breeds.
-![]()
+### Top 5 smartest large dog breeds.
 
-* Top 5 smartest small dog breeds.
-![]()
+![Top five smartest large breeds](images/Top%205%20most%20intelligent%20large%20dog%20breeds.PNG)
 
-* Top ten dog breeds by intelligence.
-![]()
+### Top 5 smartest small dog breeds.
 
+![Top five smartest small breeds](images/Top%205%20most%20intelligent%20small%20dog%20breeds.PNG)
 
-* Average intelligence across all breeds based on dog weight.
-![]()
+### Top ten dog breeds by intelligence.
+
+![Top ten breeds by intelligence](images/Top%2010%20most%20intelligent%20dog%20breeds.PNG)
+
+### Average intelligence across all breeds based on dog weight.
+
+![Average intelligence by dog weight](images/Average%20intelligence%20by%20weight.PNG)
 
 The results indicate that medium-sized dog breeds have a higher level of intelligence on average when compared to large and small dog breeds.
